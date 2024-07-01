@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="mainDiv">
+        <div class="sidebar">
+            <h1>Add New Books</h1>
+            <form>
+                <label for="newBookTitle">Book Title</label>
+                <input type="text" placeholder="Title" class="inputFields newBookTitle">
+                <label for="newBookAuthor">Book Author</label>
+                <input type="text" placeholder="Author" class="inputFields newBookAuthor">
+                <label for="newBookPages">No. of Pages</label>
+                <input type="text" placeholder="No. of Pages" class="inputFields newBookPages">
+                <fieldset>
+                    <label for="readRadio">Read</label>
+                    <input type="radio" id="readRadio" class="radio readRadio" name="status">
+                    <label for="unreadRadio">UnRead</label>
+                    <input type="radio" id="unreadRadio" class="radio unreadRadio" name="status">
+                </fieldset>
+                <button>Add the Book</button>
+            </form>
+        </div>
+        <div class="bookRecords">
+            <h1>Books</h1>
+            <table id="bookTable">
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>No. of Pages</th>
+                    <th>Read Status</th>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>A</td>
+                    <td>A</td>
+                    <td>A</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
