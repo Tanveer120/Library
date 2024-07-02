@@ -12,14 +12,10 @@ let addBook = document.querySelector(".addBook");
 let refresh = document.querySelector(".refreshTable");
 let table = document.querySelector("#bookTable");
 
-
-
 let Hobbit = new Books("Hobbit", "Hobbiter", 920, true);
 let ReviveYourHeart = new Books("Revive Your Heart", "NAK", 600, false);
 let index;
 bookArr = [Hobbit,ReviveYourHeart];
-
-
 
 function fillTable() {
     header();
@@ -99,3 +95,21 @@ $(document).ready(function(){
 
 fillTable();
 
+
+let addButton = document.querySelector("#addButton");
+
+addButton.addEventListener("click", () => {
+    console.log(addButton.className);
+    if (addButton.className === "inactive") {
+        addButton.className = "active";
+        $(".sidebar").css({
+            "display": "block",
+        });
+    }
+    else {
+        addButton.className = "inactive";
+        $(".sidebar").css({
+            "display": "none",
+        });
+    }
+})

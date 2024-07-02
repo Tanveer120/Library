@@ -10,26 +10,26 @@
 </head>
 
 <body>
-    <div class="mainDiv">
-        <div class="sidebar">
-            <h1>Add New Books</h1>
-            <form>
-                <label for="newBookTitle">Book Title</label>
-                <input type="text" placeholder="Title" class="inputFields " id="newBookTitle">
-                <label for="newBookAuthor">Book Author</label>
-                <input type="text" placeholder="Author" class="inputFields" id="newBookAuthor">
-                <label for="newBookPages">No. of Pages</label>
-                <input type="text" placeholder="No. of Pages" class="inputFields" id="newBookPages">
-                <fieldset>
-                    <label for="readRadio">Read</label>
-                    <input type="radio" id="readRadio" class="radio readRadio" name="status" value=true>
-                    <label for="unreadRadio">UnRead</label>
-                    <input type="radio" id="unreadRadio" class="radio unreadRadio" name="status" value=false>
-                </fieldset>
-                <button class="addBook">Add the Book</button>
-                <button class="refreshTable">Refresh</button>
-            </form>
-        </div>
+    <div class="sidebar">
+        <h1>Add New Books</h1>
+        <form>
+            <label for="newBookTitle">Book Title</label>
+            <input type="text" placeholder="Title" class="inputFields " id="newBookTitle">
+            <label for="newBookAuthor">Book Author</label>
+            <input type="text" placeholder="Author" class="inputFields" id="newBookAuthor">
+            <label for="newBookPages">No. of Pages</label>
+            <input type="text" placeholder="No. of Pages" class="inputFields" id="newBookPages">
+            <fieldset>
+                <label for="readRadio">Read</label>
+                <input type="radio" id="readRadio" class="radio readRadio" name="status" value=true>
+                <label for="unreadRadio">UnRead</label>
+                <input type="radio" id="unreadRadio" class="radio unreadRadio" name="status" value=false>
+            </fieldset>
+            <button class="addBook">Add the Book</button>
+            <button class="refreshTable">Refresh</button>
+        </form>
+    </div>
+    <div class="mainDiv">   
         <div class="bookRecords">
             <h1>Books</h1>
             <table id="bookTable">
@@ -44,6 +44,7 @@
         </div>
     </div>
 
+    <button id="addButton" class="inactive">+</button>
     <script src="index.js"></script>
 </body>
 

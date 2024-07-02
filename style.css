@@ -3,24 +3,42 @@
     padding: 0;
     margin: 0;
     border: none;
+    overflow-x: hidden;
+    scrollbar-width: 0;
 }
 
 .mainDiv{
-    display: flex;
-
+    width: 100vw;
 }
+
 .sidebar{
-    /* width: 30vw; */
+    width: 30%;
     background-color: blueviolet;
-    height: 100vh;
+    height:auto;
+    position: absolute;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    top :10px;
+    border-radius: 20px;
+    transition: 1000ms;
+    overflow: hidden;
+    display: none;
+}
+
+.sidebarInactive{
+    visibility: hidden;
+}
+
+.sidebarActive{
+    visibility: visible;
 }
 
 .sidebar h1{
-    background-color: dodgerblue;
     color: white;
     text-align: center;
-    
-    margin-bottom: 50px;
+    margin: 20px;
+    padding: 20px;
 }
 
 .sidebar input{
@@ -38,7 +56,6 @@
     height: 20px;
     width: 20px;
     margin: 10px;
-    /* margin-top: 50px; */
 }
 
 .sidebar label{
@@ -54,7 +71,7 @@
 }
 
 .sidebar button{
-    height: 40px;
+    height: 50px;
     width: 93%;
     margin: 15px;
     border: none;
@@ -69,24 +86,18 @@
     text-align: center;
     color: white;
     border-left: none;
+    padding: 10px;
+    font-size: 40px;
 }
 
-
 table{
-    width: 70vw;
-    
+    width: 100%;
     background-color: blueviolet;
-    /* display: flex;
-    align-items: center;
-    justify-content: space-evenly; */
-    
 }
 
 th{
-    /* border: 1px solid black; */
     width: 22%;
     flex: 1;
-    /* width: 20%; */
     height: 30px;
     font-size: 20px;
     background-color:cornflowerblue;
@@ -94,10 +105,8 @@ th{
 }
 
 td{
-    /* border: 1px solid black; */
     padding-left: 10px;
     height: 30px;
-    
 }
 
 tr:nth-child(even){
@@ -118,11 +127,36 @@ tr:nth-child(odd){
 }
 
 button:hover{
-    scale: 1.03;
-    /* border: 1px solid white; */
-    
+    scale: 1.02;
 }
 
 tr:nth-child(even):hover{
     background-color: rgba(240, 230, 140, 0.98);
+}
+
+.inactive{
+    background-color: blueviolet;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 50px;
+    color: white;
+    transition: 500ms;
+}
+
+.active{
+    background-color: red;
+    height: 70px;
+    width: 70px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 50px;
+    color: white;
+    border-radius: 50%;
+    rotate: 45deg;
+    transition: 500ms;
 }
