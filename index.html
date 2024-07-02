@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -14,18 +15,19 @@
             <h1>Add New Books</h1>
             <form>
                 <label for="newBookTitle">Book Title</label>
-                <input type="text" placeholder="Title" class="inputFields newBookTitle">
+                <input type="text" placeholder="Title" class="inputFields " id="newBookTitle">
                 <label for="newBookAuthor">Book Author</label>
-                <input type="text" placeholder="Author" class="inputFields newBookAuthor">
+                <input type="text" placeholder="Author" class="inputFields" id="newBookAuthor">
                 <label for="newBookPages">No. of Pages</label>
-                <input type="text" placeholder="No. of Pages" class="inputFields newBookPages">
+                <input type="text" placeholder="No. of Pages" class="inputFields" id="newBookPages">
                 <fieldset>
                     <label for="readRadio">Read</label>
-                    <input type="radio" id="readRadio" class="radio readRadio" name="status">
+                    <input type="radio" id="readRadio" class="radio readRadio" name="status" value=true>
                     <label for="unreadRadio">UnRead</label>
-                    <input type="radio" id="unreadRadio" class="radio unreadRadio" name="status">
+                    <input type="radio" id="unreadRadio" class="radio unreadRadio" name="status" value=false>
                 </fieldset>
-                <button>Add the Book</button>
+                <button class="addBook">Add the Book</button>
+                <button class="refreshTable">Refresh</button>
             </form>
         </div>
         <div class="bookRecords">
@@ -36,12 +38,7 @@
                     <th>Author</th>
                     <th>No. of Pages</th>
                     <th>Read Status</th>
-                </tr>
-                <tr>
-                    <td>A</td>
-                    <td>A</td>
-                    <td>A</td>
-                    <td>A</td>
+                    <th>Remove</th>
                 </tr>
             </table>
         </div>
